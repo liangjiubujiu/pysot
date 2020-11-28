@@ -41,7 +41,23 @@ We provide a large set of baseline results and trained models available for down
 
 ## Installation
 
-Please find installation instructions for PyTorch and PySOT in [`INSTALL.md`](INSTALL.md).
+Please find installation instructions for PyTorch and PySOT in [`INSTALL.md`](INSTALL.md). 
+ For example, if you have installed cuda 10.1 on your ubuntu 10.04, please create anaconda virtual env followed by [`INSTALL.md`](INSTALL.md). 
+ ```
+ source create -n pysot python=3.7
+ ```
+
+## Test your own video.
+
+0. Prepare your own video on /demo like /demo/d.mp4.
+1. Choose your model and run
+```
+python demo.py --config experiments/siammask_r50_l3/config.yaml --snapshot experiments/siammask_r50_l3/model.pth --video demo/d.mp4
+```
+Attention: you should only download certain the pretrained siam trackers (.pth) from baidu cloud disk. Please do not copy the yaml files.
+
+
+
 
 ## Quick Start: Using PySOT
 
